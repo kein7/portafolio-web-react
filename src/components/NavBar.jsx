@@ -3,7 +3,7 @@ import {AppBar, Box, Toolbar, Typography, Button} from '@mui/material'
 export default function ButtonAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" sx={{background: "#64B1EB"}} >
         <Toolbar>
         <Typography sx={{ flexGrow: 1 }} ></Typography>
         <Button color="inherit">Inicio</Button>  
