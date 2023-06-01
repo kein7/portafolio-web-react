@@ -1,7 +1,26 @@
 import { Box, Container, Grid, Typography, Button } from "@mui/material";
 import { useForm } from "react-hook-form";
+import emailjs from "emailjs-com";
+import React, { useRef } from "react";
 
 export default function Form() {
+  const form = useRef();
+
+  const enviarEmail = (e) => {
+    
+    emailjs
+      .sendForm(
+        "service_v7xtjuw",
+        "template_kjfgucg",
+        form.current,
+        "AAZSsTbeUaGmO1w8f"
+      )
+      .then((res) => {
+        alert("Se ha enviado correctamente");
+        console.log(res);
+      });
+  };
+
   const {
     formState: { errors },
     register,
@@ -25,7 +44,7 @@ export default function Form() {
       <Typography variant="h2" sx={{ mb: 8 }}>
         Contactame :)
       </Typography>
-      <Box component="form" onSubmit={handleSubmit(onSubmit)}>
+      <Box component="form" ref={form} onSubmit={handleSubmit(enviarEmail)}>
         <Typography>
           <input
             type="text"
@@ -48,7 +67,7 @@ export default function Form() {
             {...register("email", {
               required: true,
               maxLength: 25,
-              pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+              pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
             })}
           ></input>
           {errors.email?.type === "required" && (
@@ -57,7 +76,7 @@ export default function Form() {
           {errors.email?.type === "maxLength" && (
             <Typography>Formato incorrecto</Typography>
           )}
-            {errors.email?.type === "pattern" && (
+          {errors.email?.type === "pattern" && (
             <Typography>Formato incorrecto</Typography>
           )}
         </Box>
