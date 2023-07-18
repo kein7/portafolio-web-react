@@ -1,7 +1,7 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { Repository, mapDto } from "./Repository";
+import { RepositoryContent, mapDto } from "./RepositoryContent";
 import { WrapText } from "@mui/icons-material";
 
 export default function Repositories() {
@@ -19,28 +19,42 @@ export default function Repositories() {
   }, []);
 
   return (
-    <Container
+    <Box
+      id="repositorios"
       sx={{
         overflow: "hidden",
-        p: 4,
         display: "flex",
-        alignItems: "center",
         flexDirection: { xs: "column", md: "column" },
+        ml: { sm: 5, md: 9, lg: 20 },
+        mr: { sm: 5, md: 9, lg: 20 },
+        
       }}
     >
-      <Typography variant="h2" sx={{ pb: 8}}>
+      <Typography
+        align="center"
+        variant="h2"
+        sx={{ pb: { xs: 5, md: 8 }, fontSize: { xs: 45, sm: 50, md: 60 }, mt: {xs: 2}}}
+      >
         Repositorios
       </Typography>
-      <Container
+      <Box
         sx={{
           display: "flex",
-          flexWrap: "wrap", 
+          alignItems: "center",
+          flexDirection: { xs: "column", md: "row" },
+          flexWrap: { md: "wrap" },
+          justifyContent: "center",
+          ml: { xs: 1 },
+          mr: { xs: 1 },
         }}
       >
         {repos?.map((repo, key) => (
-          <Repository key={`repository-${key}`} repo={repo}></Repository>
+          <RepositoryContent
+            key={`repository-${key}`}
+            repo={repo}
+          ></RepositoryContent>
         ))}
-      </Container>
-    </Container>
+      </Box>
+    </Box>
   );
 }

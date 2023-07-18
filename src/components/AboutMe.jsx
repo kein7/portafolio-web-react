@@ -1,26 +1,52 @@
 import { Box, Typography } from "@mui/material";
 
-
 export default function AboutMe() {
   return (
-    <Box sx={{
-      display: "flex",
-      alignItems: "center",
-      flexDirection: { xs: "column", md: "column" },
-      overflow: "hidden",
-      p:8,
-    }}>
-      <Typography variant="h2" sx={{pb: 4}}>Sobre mi</Typography>
-      <Typography variant="h4" sx={{pl: 15, pr: 15, pb: 5}}>
+    <Box
+      id="sobre-mi"
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        flexDirection: { xs: "column", md: "column" },
+        overflow: "hidden",
+        p: { xs: 4, md: 6 },
+      }}
+    >
+      <Typography
+        variant="h2"
+        sx={{ pb: { xs: 4, md: 6 }, fontSize: { xs: 45, sm: 50, md: 60 } }}
+      >
+        Sobre mi
+      </Typography>
+      <Typography
+        align="center"
+        variant="subtitle1"
+        sx={{
+          pl: { xs: 2, md: 30 },
+          pr: { xs: 2, md: 30 },
+          pb: { xs: 4, md: 5 },
+          alignItems: "center",
+          fontSize: { xs: 25, md: 34 },
+        }}
+      >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget
         erat commodo, viverra elit vel, blandit lacus.
       </Typography>
-      <Typography variant="h5" sx={{pl: 8, pr: 8}}>
+      <Typography
+        align="center"
+        variant="subtitle2"
+        sx={{
+          pl: { xs: 2, md: 15 },
+          pr: { xs: 2, md: 15 },
+          fontSize: { xs: 18, md: 22 },
+        }}
+      >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget
-        erat commodo, viverra elit vel, blandit lacus. Loremamet, consectetur adipiscing elit. Mauris eget
-        ert vel, blandit lacusLorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget
-        erat , viverra elit vel, bland dolor sit amet, consectetur adipiscing elit. Mauris eget
-        erat commod elit vacus.Lorem ipsum dolor sitetur adipiscing elit. Mauris eget
+        erat commodo, viverra elit vel, blandit lacus. Loremamet, consectetur
+        adipiscing elit. Mauris eget ert vel, blandit lacusLorem ipsum dolor sit
+        amet, consectetur adipiscing elit. Mauris eget erat , viverra elit vel,
+        bland dolor sit amet, consectetur adipiscing elit. Mauris eget erat
+        commod elit vacus.Lorem ipsum dolor sitetur adipiscing elit. Mauris eget
         eratit vel, blandit lacus.
       </Typography>
     </Box>

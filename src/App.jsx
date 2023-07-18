@@ -7,7 +7,8 @@ import NavBar from "./components/NavBar";
 import Inicio from "./components/Inicio";
 import AboutMe from "./components/AboutMe";
 import Repositories from './components/Repositories'
-import Form from './components/Form'
+import ContactMe from './components/ContactMe'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
@@ -16,7 +17,8 @@ export default function App() {
       <Inicio></Inicio>
       <AboutMe></AboutMe>
       <Repositories></Repositories>
-      <Form></Form>
+      <ContactMe></ContactMe>
+      <Footer></Footer>
     </div>
   );
 }

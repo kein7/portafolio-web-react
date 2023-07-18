@@ -1,23 +1,11 @@
 import * as React from "react";
-import { AppBar, Box, Grid, Typography, Button } from "@mui/material";
+import { AppBar, Box, Grid, Typography, Button, Link } from "@mui/material";
 import inicioAvatar from "../assets/Img/inicioAvatar.jpg";
 import background from "../assets/Img/portafolioBackground.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-
-const styles = {
-  backgroundImage: `url(${background})`,
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "cover",
-};
-
-const iconStyles = {
-  color: "white",
-  height: 50,
-  width: 100,
-};
 
 const socialIcons = [
   { name: "Github", icon: faGithub, url: "https://github.com/kein7" },
@@ -29,27 +17,41 @@ const socialIcons = [
   },
 ];
 
+const iconStyles = {
+  height: "20%",
+  width: "16%",
+  color: "white",
+};
+
 export default function Inicio() {
   return (
-    <div style={styles}>
+    <Box
+      sx={{
+        mt: 5,
+        backgroundImage: `url(${background})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: { xs: "10% 40%" },
+      }}
+    >
       <Box
+        id="inicio"
         sx={{
           display: "flex",
           alignItems: "center",
           flexDirection: { xs: "column", md: "column" },
-          overflow: "hidden",
           p: 5,
         }}
       >
         <Box
           component="img"
           sx={{
-            height: 400,
-            width: 400,
-            maxHeight: { xs: 400, md: 500 },
-            maxWidth: { xs: 400, md: 500 },
+            height: 500,
+            width: 500,
+            maxHeight: { xs: 200, md: 400, lg: 500 },
+            maxWidth: { xs: 200, md: 400, lg: 500 },
             borderRadius: 100,
-            mt: 3,
+            mt: 2,
           }}
           src={inicioAvatar}
           alt="inicioAvatar"
@@ -59,37 +61,50 @@ export default function Inicio() {
             display: "flex",
             flexDirection: "column",
             alignItems: { xs: "center", md: "center" },
-            mt: 5,
+            mt: 4,
             mb: 3,
-            minWidth: { xs: 200, md: 350 },
+            minWidth: { xs: 250, md: 350 },
             color: "#EAEAEA",
             background: "rgb(0, 0, 0, 0.7)",
             borderRadius: 2,
             boxShadow: 7,
           }}
         >
-          <Typography variant="h3" sx={{ opacity: 1 }}>
+          <Typography
+            variant="h3"
+            align="center"
+            sx={{ opacity: 1, fontSize: { xs: 35, md: 50, lg: 60 } }}
+          >
             Kevin Nicolás Orellana Moraga
           </Typography>
         </Box>
-        <Box sx={{ pt: 2 }}>
+        <Box
+          align="center"
+          sx={{
+            display: "flex",
+            pt: { xs: 0, md: 1, lg: 3 },
+            alignItems: "center",
+          }}
+        >
           {socialIcons.map((item, index) => (
-            <a
-              href={item.url}
-              target="_blank"
-              rel="nooponer noreferrer"
-              aria-label={item.name}
-              key={index}
-            >
-              <FontAwesomeIcon
-                icon={item.icon}
+            <Box sx={{}} key={index}>
+              <Link
+                href={item.url}
+                target="_blank"
+                rel="nooponer noreferrer"
+                aria-label={item.name}
                 key={index}
-                style={iconStyles}
-              />
-            </a>
+              >
+                <FontAwesomeIcon
+                  icon={item.icon}
+                  key={index}
+                  style={iconStyles}
+                />
+              </Link>
+            </Box>
           ))}
         </Box>
       </Box>
-    </div>
+    </Box>
   );
 }
