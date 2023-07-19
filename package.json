@@ -1,12 +1,12 @@
 {
-  "name": "proyecto-portafolio-kevin",
-  "private": true,
-  "homepage": "http://kein7.github.io/portafolio-web-react",
+  "name": "portafolio-web-react",
+  "private": false,
+  "homepage": "https://kein7.github.io/portafolio-web-react/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
