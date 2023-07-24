@@ -308,7 +308,7 @@
   font-weight: 700;
   src: url(https://github.com/kein7/portafolio-web-react/edit/gh-pages/assets/roboto-latin-ext-700-normal-fc66f942.woff2)
       format("woff2"),
-    url(/assets/roboto-all-700-normal-b5883883.woff) format("woff");
+    url(https://github.com/kein7/portafolio-web-react/edit/gh-pages/assets/roboto-all-700-normal-b5883883.woff) format("woff");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
     U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
