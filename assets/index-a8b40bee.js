@@ -20719,7 +20719,7 @@ function l4() {
 const u4 =
     "https://github.com/kein7/portafolio-web-react/blob/gh-pages/assets/inicioAvatar-bbeb0c92.jpg",
   c4 =
-    "https://github.com/kein7/portafolio-web-react/gh-pages/assets/portafolioBackground-00790332.jpg";
+    "https://github.com/kein7/portafolio-web-react/blob/gh-pages/assets/portafolioBackground-00790332.jpg";
 function Jv(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
