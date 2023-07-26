@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Container, Box, Typography } from "@mui/material";
 
-import background from "../assets/Img/nubes-background.png";
+import background from "../Img/nubes-background.png";
 
 export default function Footer() {
   const year = new Date().getFullYear();

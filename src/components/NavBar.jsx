@@ -1,8 +1,8 @@
 import * as React from "react";
 import { AppBar, Box, Toolbar, Typography, Button } from "@mui/material";
 import { Link } from "react-scroll";
-import background from "../assets/Img/nubes-background.png";
-import logo from "../assets/Img/kein7-logo.png";
+import background from "../Img/nubes-background.png";
+import logo from "../Img/kein7-logo.png";
 
 export default function ButtonAppBar() {
   return (

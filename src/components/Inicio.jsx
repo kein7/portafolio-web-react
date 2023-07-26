@@ -1,7 +1,7 @@
 import * as React from "react";
 import { AppBar, Box, Grid, Typography, Button, Link } from "@mui/material";
-import inicioAvatar from "../assets/Img/inicioAvatar.jpg";
-import background from "../assets/Img/portafolioBackground.jpg";
+import inicioAvatar from "../Img/inicioAvatar.jpg";
+import background from "../Img/portafolioBackground.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
