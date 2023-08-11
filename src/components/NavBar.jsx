@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 import background from "../Img/nubes-background.png";
 import logo from "../Img/kein7-logo.png";
 
-export default function ButtonAppBar() {
+export default function NavBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
@@ -38,7 +38,7 @@ export default function ButtonAppBar() {
             src={logo}
           ></Box>
           <Typography sx={{ flexGrow: 1 }}></Typography>
-          <Link to="inicio" spy={true} smooth={true} duration={500}>
+          <Link to="inicio" spy={true} offset={-50} smooth={true} duration={500}>
             <Button
               color="inherit"
               sx={{ fontSize: { xs: 11, sm: 13,md:15 }, ml: { xs: -2.8 } }}
