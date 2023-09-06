@@ -29,8 +29,8 @@ export default function AboutMe() {
           fontSize: { xs: 25, md: 34 },
         }}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget
-        erat commodo, viverra elit vel, blandit lacus.
+        Estudiante de Ingenieria en Informatica de la Universidad Diego Portales y 
+        apasionado del mundo digital y la tecnologia
       </Typography>
       <Typography
         align="center"
@@ -41,13 +41,9 @@ export default function AboutMe() {
           fontSize: { xs: 18, md: 22 },
         }}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget
-        erat commodo, viverra elit vel, blandit lacus. Loremamet, consectetur
-        adipiscing elit. Mauris eget ert vel, blandit lacusLorem ipsum dolor sit
-        amet, consectetur adipiscing elit. Mauris eget erat , viverra elit vel,
-        bland dolor sit amet, consectetur adipiscing elit. Mauris eget erat
-        commod elit vacus.Lorem ipsum dolor sitetur adipiscing elit. Mauris eget
-        eratit vel, blandit lacus.
+        Experiencia en desarrollo web y desktop con el uso de tecnologias como 
+        ReactJS, NodeJS y C# .Net framework.
+        Automatización de tareas con python y manejo de SQL 
       </Typography>
     </Box>
   );

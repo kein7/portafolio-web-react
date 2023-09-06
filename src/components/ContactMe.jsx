@@ -142,6 +142,8 @@ export default function ContactMe() {
               type="text"
               name="mensaje"
               placeholder="Ingrese su mensaje"
+              multiline
+              maxRows={8}
               {...register("mensaje", {
                 required: true,
                 maxLength: 300,
