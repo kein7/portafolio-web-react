@@ -8,6 +8,7 @@ import AboutMe from "./components/AboutMe";
 import Repositories from './components/Repositories'
 import ContactMe from './components/ContactMe'
 import Footer from './components/Footer'
+import Certifications from './components/Certfications'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <NavBar></NavBar>
       <Inicio></Inicio>
       <AboutMe></AboutMe>
+      <Certifications></Certifications>
       <Repositories></Repositories>
       <ContactMe></ContactMe>
       <Footer></Footer>
