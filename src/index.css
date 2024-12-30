@@ -1,4 +1,7 @@
-body { margin: 0; }
+body {
+  margin: 0;
+  background-color: #e5f4ff;
+}
 
 /*
 * {
@@ -7,4 +10,3 @@ body { margin: 0; }
     outline: solid #f00 1px !important;
   }
  */
-  

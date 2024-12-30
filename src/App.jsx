@@ -1,25 +1,24 @@
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
-import NavBar from "./components/NavBar";
-import Inicio from "./components/Inicio";
-import AboutMe from "./components/AboutMe";
-import Repositories from './components/Repositories'
-import ContactMe from './components/ContactMe'
+import '@fontsource/roboto/300.css'
+import '@fontsource/roboto/400.css'
+import '@fontsource/roboto/500.css'
+import '@fontsource/roboto/700.css'
+import { Box, Card, CardContent, Typography, useTheme } from '@mui/material'
+import NavBar from './components/NavBar'
 import Footer from './components/Footer'
-import Certifications from './components/Certfications'
+import Timeline from './components/Timeline'
+import { ThemeProvider } from '@mui/material/styles'
+import theme from './components/Theme'
+import Projects from './components/Projects'
+import { BrowserRouter as Router, Routes, Route } from 'react-router'
 
 export default function App() {
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <NavBar></NavBar>
-      <Inicio></Inicio>
-      <AboutMe></AboutMe>
-      <Certifications></Certifications>
-      <Repositories></Repositories>
-      <ContactMe></ContactMe>
+      <Box sx={{ mt: { xs: 6, md: 30 } }}></Box>
+      <Timeline />
+      <Projects />
       <Footer></Footer>
-    </div>
-  );
+    </ThemeProvider>
+  )
 }
