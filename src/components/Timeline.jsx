@@ -263,11 +263,7 @@ const Timeline = () => {
                   Mi CV
                 </Button>
                 <IconButton
-                  onClick={() =>
-                    openTab(
-                      'https://drive.google.com/file/d/16uQt8IQ0KVYSfz_OLqiHfvXEppdHiCqr/view?usp=sharing'
-                    )
-                  }
+                  onClick={() => openTab('https://cl.linkedin.com/in/kein7')}
                   sx={{
                     width: 40, // Set the desired width
                     height: 40, // Set the desired height
