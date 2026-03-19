@@ -1,10 +1,10 @@
-import * as React from 'react'
-import { Container, Box, Typography } from '@mui/material'
+import * as React from 'react';
+import { Container, Box, Typography } from '@mui/material';
 
-import background from '@/assets/Img/nubes-background.png'
+import background from '@/assets/Img/nubes-background.png';
 
 export default function Footer() {
-  const year = new Date().getFullYear()
+  const year = new Date().getFullYear();
 
   return (
     <Box
@@ -16,18 +16,18 @@ export default function Footer() {
         height: { xs: 50, md: 70 },
         backgroundImage: `url(${background})`,
         backgroundPositionY: 1000,
-        mt: 5
+        mt: 5,
       }}
     >
       <Typography
         align="center"
         sx={{
           fontSize: { xs: 12, sm: 15, md: 15 },
-          m: { xs: 1, sm: 1.5, md: 3 }
+          m: { xs: 1, sm: 1.5, md: 3 },
         }}
       >
         Derechos de autor ©{year}. Todos los derechos reservados
       </Typography>
     </Box>
-  )
+  );
 }
