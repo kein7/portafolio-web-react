@@ -13,16 +13,16 @@ import {
 } from '@mui/material'
 import { margin, styled } from '@mui/system'
 import { FaCircle } from 'react-icons/fa'
-import inicioAvatar from '../Img/inicioAvatar.jpg'
-import linkedinLogo from '../Img/linkedin-logo.png'
-import githubLogo from '../Img/Github-logo.png'
-import youtubeLogo from '../Img/Youtube_logo.png'
-import udpLogo from '../Img/udp-logo.png'
-import womLogo from '../Img/WOM-logo.png'
-import gcpLogo from '../Img/gcp-logo.png'
-import facu from '../Img/facu-ing.jpg'
-import gcpace from '../Img/gcpace.png'
-import wom from '../Img/wom.jpeg'
+import inicioAvatar from '@/assets/Img/inicioAvatar.jpg'
+import linkedinLogo from '@/assets/Img/linkedin-logo.png'
+import githubLogo from '@/assets/Img/Github-logo.png'
+import youtubeLogo from '@/assets/Img/Youtube_logo.png'
+import udpLogo from '@/assets/Img/udp-logo.png'
+import womLogo from '@/assets/Img/WOM-logo.png'
+import gcpLogo from '@/assets/Img/gcp-logo.png'
+import facu from '@/assets/Img/facu-ing.jpg'
+import gcpace from '@/assets/Img/gcpace.png'
+import wom from '@/assets/Img/wom.jpeg'
 
 const timelineMainData = {
   title: '¡Hola! soy Kevin',
@@ -243,7 +243,7 @@ const Timeline = () => {
                 <Button
                   onClick={() =>
                     openTab(
-                      'https://drive.google.com/file/d/16uQt8IQ0KVYSfz_OLqiHfvXEppdHiCqr/view?usp=sharing'
+                      'https://drive.google.com/file/d/1WECo18FJdQYvSDLHK9lPE_aW3VN0ZBxg/view?usp=sharing'
                     )
                   }
                   sx={{
