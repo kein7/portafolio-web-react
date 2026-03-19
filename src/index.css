@@ -10,3 +10,12 @@ body {
     outline: solid #f00 1px !important;
   }
  */
+
+@keyframes moveBackground {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 800px;
+  }
+}

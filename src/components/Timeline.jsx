@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   Box,
   Button,
@@ -9,20 +9,20 @@ import {
   useMediaQuery,
   IconButton,
   List,
-  ListItem
-} from '@mui/material'
-import { margin, styled } from '@mui/system'
-import { FaCircle } from 'react-icons/fa'
-import inicioAvatar from '@/assets/Img/inicioAvatar.jpg'
-import linkedinLogo from '@/assets/Img/linkedin-logo.png'
-import githubLogo from '@/assets/Img/Github-logo.png'
-import youtubeLogo from '@/assets/Img/Youtube_logo.png'
-import udpLogo from '@/assets/Img/udp-logo.png'
-import womLogo from '@/assets/Img/WOM-logo.png'
-import gcpLogo from '@/assets/Img/gcp-logo.png'
-import facu from '@/assets/Img/facu-ing.jpg'
-import gcpace from '@/assets/Img/gcpace.png'
-import wom from '@/assets/Img/wom.jpeg'
+  ListItem,
+} from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { FaCircle } from 'react-icons/fa';
+import inicioAvatar from '@/assets/Img/inicioAvatar.jpg';
+import linkedinLogo from '@/assets/Img/linkedin-logo.png';
+import githubLogo from '@/assets/Img/Github-logo.png';
+import youtubeLogo from '@/assets/Img/Youtube_logo.png';
+import udpLogo from '@/assets/Img/udp-logo.png';
+import womLogo from '@/assets/Img/WOM-logo.png';
+import gcpLogo from '@/assets/Img/gcp-logo.png';
+import facu from '@/assets/Img/facu-ing.jpg';
+import gcpace from '@/assets/Img/gcpace.png';
+import wom from '@/assets/Img/wom.jpeg';
 
 const timelineMainData = {
   title: '¡Hola! soy Kevin',
@@ -30,8 +30,8 @@ const timelineMainData = {
   description:
     'Profesional con habilidades solidas en programación, cloud, bases de datos, análisis de datos y ' +
     'gestión. Estoy buscando la oportunidad de integrarme en un equipo para ayudar a enfrentar desafios' +
-    'que me permitan diseñar e implementar soluciones para ideas de negocio transformadoras.'
-}
+    'que me permitan diseñar e implementar soluciones para ideas de negocio transformadoras.',
+};
 
 const timelineData = [
   {
@@ -44,7 +44,7 @@ const timelineData = [
       'trabajo interdisciplinarios para desarrollar y administrar soluciones informáticas, así como gestionar los recursos ' +
       'con el fin de hacer un uso eficiente de ellos, contribuyendo al cumplimiento de los objetivos organizacionales mediante soluciones tecnológicas.',
     logoImg: udpLogo,
-    component: 'InfoCard'
+    component: 'InfoCard',
   },
   { image: facu, component: 'ImgCard' },
   { name: 'gcpace', image: gcpace, component: 'ImgCard' },
@@ -55,7 +55,7 @@ const timelineData = [
       'Avala las competencias fundamentales para desplegar y mantener proyectos en la nubeCandidato recomendado:' +
       'Tiene experiencia en desplegar aplicaciones en la nube y supervisar operaciones\n Tiene experiencia en la gestión de soluciones empresariales en la nube',
     logoImg: gcpLogo,
-    component: 'InfoCard'
+    component: 'InfoCard',
   },
 
   {
@@ -65,13 +65,13 @@ const timelineData = [
       '• Mejorar la experiencia de usuario del canal televentas añadiendo validaciones y mensajes dirigidos al usuario en los formularios y componentes.',
       '• Utilización de pipelines de azure devops junto git durante el ciclo de desarrollo del software a través de los diferentes ambientes pre-productivos.',
       '• Participación proactiva en las reuniones SCRUM del equipo haciendo uso correcto de metodologías ágiles y KANBAN.',
-      '• Documentación de los endpoints usados por el frontend de la aplicación.'
+      '• Documentación de los endpoints usados por el frontend de la aplicación.',
     ],
     logoImg: womLogo,
-    component: 'InfoCard'
+    component: 'InfoCard',
   },
-  { image: wom, component: 'ImgCard' }
-]
+  { image: wom, component: 'ImgCard' },
+];
 
 const TimelineContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -81,9 +81,9 @@ const TimelineContainer = styled(Box)(({ theme }) => ({
   minHeight: '100vh',
   [theme.breakpoints.down('sm')]: {
     flexWrap: 'wrap',
-    left: 0
-  }
-}))
+    left: 0,
+  },
+}));
 
 const TimelineLine = styled(Box)(({ theme }) => ({
   position: 'absolute',
@@ -97,9 +97,9 @@ const TimelineLine = styled(Box)(({ theme }) => ({
     left: 0,
     marginLeft: 15,
     top: 270,
-    height: '90%'
-  }
-}))
+    height: '90%',
+  },
+}));
 
 const TimelineItemsContainer = styled(Box)(({ theme }) => ({
   display: 'grid',
@@ -111,91 +111,91 @@ const TimelineItemsContainer = styled(Box)(({ theme }) => ({
     display: 'flex',
     flexWrap: 'wrap',
     left: 0,
-    marginLeft: 0
-  }
-}))
+    marginLeft: 0,
+  },
+}));
 
-const TimelineItem = styled(Box)(({ theme, align }) => ({
+const TimelineItem = styled(Box, {
+  shouldForwardProp: (prop) => prop !== 'align',
+})(({ theme, align }) => ({
+  display: 'flex',
   justifyContent: align === 'left' ? 'flex-end' : 'flex-start',
+  flexDirection: align === 'left' ? 'row-reverse' : 'row',
   zIndex: 0,
   marginBottom: theme.spacing(26),
   [theme.breakpoints.down('sm')]: {
     width: '100%',
-    marginBottom: theme.spacing(7)
-  }
-}))
+    marginBottom: theme.spacing(7),
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+  },
+}));
 
-const TimelineMarker = styled(Box)(({ theme }) => ({
+const TimelineMarker = styled(Box, {
+  shouldForwardProp: (prop) => prop !== 'align',
+})(({ theme }) => ({
   color: theme.palette.primary.main,
   backgroundColor: theme.palette.primary.background,
   margin: -10,
   right: 5,
   [theme.breakpoints.down('sm')]: {
-    margin: -26.9
-  }
-}))
+    margin: -26.9,
+  },
+}));
 
-const TimelineContent = styled(Card)(({ theme, index, isSm }) => ({
+const TimelineContent = styled(Card, {
+  shouldForwardProp: (prop) => prop !== 'index' && prop !== 'isSm' && prop !== 'align',
+})(({ theme, index, isSm }) => ({
   margin: theme.spacing(0, 10),
   padding: theme.spacing(2),
 
   transition: 'transform 0.3s ease',
   '&:hover': {
-    transform: isSm
-      ? 'translateX(-5px)'
-      : index % 2 === 0
-      ? 'translateX(5px)'
-      : 'translateX(-5px)'
+    transform: isSm ? 'translateX(-5px)' : index % 2 === 0 ? 'translateX(5px)' : 'translateX(-5px)',
   },
   [theme.breakpoints.down('sm')]: {
-    margin: theme.spacing(0, 1)
-  }
-}))
+    margin: theme.spacing(0, 1),
+  },
+}));
 
 const TimelineImgLogo = styled(Box)(({ theme }) => ({
   width: '90%',
   margin: theme.spacing(0, 10),
   transition: 'transform 0.3s ease',
   '&:hover': {
-    transform: 'translateX(5px)'
-  }
-}))
+    transform: 'translateX(5px)',
+  },
+}));
 
 const TimelineImg = styled(Box)(({ theme }) => ({
   width: 410,
   transition: 'transform 0.3s ease',
   [theme.breakpoints.down('sm')]: {
-    width: 264
-  }
-}))
+    width: 264,
+  },
+}));
 
 const Timeline = () => {
-  const theme = useTheme()
-  const isSm = useMediaQuery(theme.breakpoints.down('sm'))
+  const theme = useTheme();
+  const isSm = useMediaQuery(theme.breakpoints.down('sm'));
 
   const openTab = (path) => {
     // URL of the PDF file
-    const openTabPath = path
-    window.open(openTabPath, '_blank') // Open in a new tab
-  }
+    const openTabPath = path;
+    window.open(openTabPath, '_blank'); // Open in a new tab
+  };
 
   return (
     <TimelineContainer id="timeline">
       <TimelineLine />
       <TimelineItemsContainer>
         <TimelineItem
-          align={isSm ? 'left' : 'right'}
+          align={isSm ? 'left' : 'left'}
           sx={{
-            [theme.breakpoints.down('sm')]: {}
+            [theme.breakpoints.down('sm')]: {},
           }}
         >
-          {isSm ? (
-            <></>
-          ) : (
-            <TimelineMarker>
-              <FaCircle size={20} />
-            </TimelineMarker>
-          )}
+          {/* No marker here to avoid duplication with the intro text marker */}
 
           <TimelineImgLogo
             component="img"
@@ -207,18 +207,19 @@ const Timeline = () => {
               borderRadius: 100,
               [theme.breakpoints.down('sm')]: {
                 position: 'relative',
-                right: 26
-              }
+                right: 26,
+              },
             }}
             src={inicioAvatar}
             alt="inicioAvatar"
           />
         </TimelineItem>
         <TimelineItem
+          align={isSm ? 'left' : 'right'}
           sx={{
             [theme.breakpoints.down('sm')]: {
-              marginLeft: 0
-            }
+              marginLeft: 0,
+            },
           }}
         >
           <TimelineMarker>
@@ -229,11 +230,7 @@ const Timeline = () => {
               <Typography variant="h1" component="h1" gutterBottom>
                 {timelineMainData.title}
               </Typography>
-              <Typography
-                variant="subtitle1"
-                color="textSecondary"
-                gutterBottom
-              >
+              <Typography variant="subtitle1" color="textSecondary" gutterBottom>
                 {timelineMainData.subtitle}
               </Typography>
               <Typography variant="body1" color="textSecondary">
@@ -250,14 +247,14 @@ const Timeline = () => {
                     color: 'white',
                     background: '#1976d2',
                     '&:hover': {
-                      backgroundColor: '#074b8f' // Hover color
+                      backgroundColor: '#074b8f', // Hover color
                     },
                     width: 130, // Set the desired width
                     height: 40,
                     [theme.breakpoints.down('sm')]: {
                       width: 100, // Set the desired width
-                      height: 30
-                    }
+                      height: 30,
+                    },
                   }}
                 >
                   Mi CV
@@ -272,8 +269,8 @@ const Timeline = () => {
                     [theme.breakpoints.down('sm')]: {
                       height: 30,
                       width: 30,
-                      ml: 1
-                    }
+                      ml: 1,
+                    },
                   }}
                 >
                   <Box
@@ -281,14 +278,12 @@ const Timeline = () => {
                     src={linkedinLogo}
                     sx={{
                       width: '100%',
-                      height: '100%'
+                      height: '100%',
                     }}
                   ></Box>
                 </IconButton>
                 <IconButton
-                  onClick={() =>
-                    openTab('https://github.com/kein7?tab=repositories')
-                  }
+                  onClick={() => openTab('https://github.com/kein7?tab=repositories')}
                   sx={{
                     width: 40, // Set the desired width
                     height: 40, // Set the desired height
@@ -297,8 +292,8 @@ const Timeline = () => {
                     [theme.breakpoints.down('sm')]: {
                       height: 30,
                       width: 30,
-                      ml: 1
-                    }
+                      ml: 1,
+                    },
                   }}
                 >
                   <Box
@@ -306,7 +301,7 @@ const Timeline = () => {
                     src={githubLogo}
                     sx={{
                       width: '100%',
-                      height: '100%'
+                      height: '100%',
                     }}
                   ></Box>
                 </IconButton>
@@ -321,8 +316,8 @@ const Timeline = () => {
                       height: 30,
                       width: 40,
                       ml: 1,
-                      mr: 1
-                    }
+                      mr: 1,
+                    },
                   }}
                 >
                   <Box
@@ -330,7 +325,7 @@ const Timeline = () => {
                     src={youtubeLogo}
                     sx={{
                       width: '100%',
-                      height: '100%'
+                      height: '100%',
                     }}
                   ></Box>
                 </IconButton>
@@ -342,25 +337,24 @@ const Timeline = () => {
         {timelineData.map((item, index) => (
           <TimelineItem
             key={index}
+            align={isSm ? 'left' : index % 2 === 0 ? 'left' : 'right'}
             sx={{
               left: index % 2 === 0 ? 10 : '',
               right: index % 2 === 0 ? 0 : 10,
               [theme.breakpoints.down('sm')]: {
-                marginLeft: 0
-              }
+                marginLeft: 0,
+              },
             }}
           >
-            <TimelineMarker
-              align={isSm ? 'left' : index % 2 === 0 ? 'right' : 'left'}
-            >
-              <FaCircle size={20} />
-            </TimelineMarker>
+            {item.component !== 'ImgCard' && (
+              <TimelineMarker align={isSm ? 'left' : index % 2 === 0 ? 'right' : 'left'}>
+                <FaCircle size={20} />
+              </TimelineMarker>
+            )}
             {item.name === 'gcpace' ? (
               <IconButton
                 onClick={() =>
-                  openTab(
-                    'https://google.accredible.com/9ddf23e3-2b71-44e0-9052-cdf9a9d58d92'
-                  )
+                  openTab('https://google.accredible.com/9ddf23e3-2b71-44e0-9052-cdf9a9d58d92')
                 }
                 sx={{
                   borderRadius: 100,
@@ -369,8 +363,8 @@ const Timeline = () => {
                   [theme.breakpoints.down('sm')]: {
                     position: 'relative',
                     width: 200,
-                    ml: 6
-                  }
+                    ml: 6,
+                  },
                 }}
               >
                 <TimelineImg
@@ -381,8 +375,8 @@ const Timeline = () => {
                     justifyContent: 'center',
                     [theme.breakpoints.down('sm')]: {
                       position: 'relative',
-                      width: 200
-                    }
+                      width: 200,
+                    },
                   }}
                   src={item.image}
                 />
@@ -395,8 +389,8 @@ const Timeline = () => {
                     sx={{
                       borderRadius: 2,
                       [theme.breakpoints.down('sm')]: {
-                        position: 'relative'
-                      }
+                        position: 'relative',
+                      },
                     }}
                     src={item.image}
                   />
@@ -404,7 +398,7 @@ const Timeline = () => {
                   <CardContent>
                     <Box
                       sx={{
-                        display: 'flex'
+                        display: 'flex',
                       }}
                     >
                       <IconButton
@@ -415,8 +409,8 @@ const Timeline = () => {
                           mt: 1,
                           [theme.breakpoints.down('sm')]: {
                             height: 30,
-                            width: 30
-                          }
+                            width: 30,
+                          },
                         }}
                       >
                         <Box
@@ -424,7 +418,7 @@ const Timeline = () => {
                           src={item.logoImg}
                           sx={{
                             width: '100%',
-                            height: '100%'
+                            height: '100%',
                           }}
                         ></Box>
                       </IconButton>
@@ -433,17 +427,13 @@ const Timeline = () => {
                         component="h3"
                         gutterBottom
                         sx={{
-                          ml: 2
+                          ml: 2,
                         }}
                       >
                         {item.title}
                       </Typography>
                     </Box>
-                    <Typography
-                      variant="subtitle2"
-                      color="textSecondary"
-                      gutterBottom
-                    >
+                    <Typography variant="subtitle2" color="textSecondary" gutterBottom>
                       {item.date}
                     </Typography>
 
@@ -470,7 +460,7 @@ const Timeline = () => {
         ))}
       </TimelineItemsContainer>
     </TimelineContainer>
-  )
-}
+  );
+};
 
-export default Timeline
+export default Timeline;
